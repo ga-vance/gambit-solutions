@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Gambyt Solutions</title>
+  <link rel="stylesheet" type="text/css" href="front.css">
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <script src="front.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<h1>Gambyt Solutions</h1>
+    <td><img style="width: 100px;" src="./assets/Gambit.png" alt="GambytLogo" /></td>
+		<nav id="navbar">
+			<ul>
+				<li><a href="#create-ticket">Create a Ticket</a></li>
+				<li><a href="#view-tickets" id="all-tickets">View Tickets</a></li>
+				<li><a href="#inbox" id="my-inbox">Inbox</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+    <!-- <section id="login-section">
+      <div id="login-div">
+        <form autocomplete="off">
+          <label id="input-label" for="login-input">Enter user ID</label>
+          <input type="text" id="login-input" name="id" required>
+          <button type="submit" id="submitLogin">Login</button>
+        </form>
+      </div>
+		</section> -->
+		<section id="create-ticket">
+      <div id="create-ticket-element">
+        <div id="ticket-form">
+          <h2>Create a Ticket</h2>
+          <form autocomplete="off">
+            <label for="name">Job Title:</label>
+            <input type="text" id="job-title" name="name" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <div id="date-and-priority">
+              <div>
+                <label for="dateAssigned">Due Date:</label>
+                <input type="date" id="due-date" name="dateAssigned" required>
+              </div>
+              <div>
+                <label for="priority">Priority:</label>
+                <select id="priority" name="priority" required>
+                  <option value="2">High</option>
+                  <option value="1">Medium</option>
+                  <option value="0">Low</option>
+                </select>
+              </div>
+              <div>
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                  <option value="0">To-Do</option>
+                  <option value="1">In Progress</option>
+                  <option value="2">Complete</option>
+                </select>
+              </div>
+            </div>
+
+            <label class="assigneeInp" for="assignee">Assignee:</label>
+            <input class="assigneeInp" type="text" id="assignee" name="assignee" value="-1" required>
+
+            <button type="submit" id="submitTicket">Create Ticket</button>
+          </form>
+        </div>
+      </div>
+		</section>
+		<section id="view-tickets">
+      <h2>View Tickets</h2>
+      <!-- <form id="ticket-filter">
+        <div id="ticket-filter-inputs">
+          <div>
+            <label for="filter-by">Filter By:</label>
+            <select id="filter-by" name="filter-by">
+              <option value="job-title">Job Title</option>
+              <option value="priority">Priority</option>
+              <option value="assigner">Assigner</option>
+              <option value="assignee">Assignee</option>
+              <option value="status">Status</option>
+            </select>
+          </div>
+          <div>
+            <label for="filter-value">Filter Value:</label>
+            <input type="text" id="filter-value" name="filter-value">
+          </div>
+        </div>
+      <button type="submit">Apply Filter</button>
+      </form> -->
+      <div class="switch-view">
+        <button type="button" id="all">All Tickets</button>
+        <button type="button" id="mine">My Tickets</button>
+        <button type="button" id="unclaimed">Unclaimed</button>
+      </div>
+
+      <div id="tickets-container">
+      </div>
+  
+    </section>
+		<section id="inbox">
+			<h2>Inbox</h2>
+      <div class="ticket-buttons">
+        <button class="clear-inbox ticket-info" id="clear-inbox">Clear Inbox</button>
+      </div>
+      <div id="inbox-container"></div>
+		</section>
+
+    <section id="edit-ticket">
+      <div id="edit-ticket-element">
+        <div id="edit-ticket-form">
+          <h2>Edit Ticket</h2>
+          <form autocomplete="off">
+            <input type="hidden" id="hidden-ticket-id" name="ticketId" value="${ticketId}">
+            <label for="name">Job Title:</label>
+            <input type="text" id="edit-job-title" name="name" required>
+
+            <label for="description">Description:</label>
+            <textarea id="edit-description" name="description" required></textarea>
+            <div id="date-and-priority">
+              <div>
+                <label for="dateAssigned">Due Date:</label>
+                <input type="date" id="edit-due-date" name="dateAssigned" required>
+              </div>
+              <div>
+                <label for="priority">Priority:</label>
+                <select id="edit-priority" name="priority" required>
+                  <option value="2">High</option>
+                  <option value="1">Medium</option>
+                  <option value="0">Low</option>
+                </select>
+              </div>
+              <div>
+                <label for="status">Status:</label>
+                <select id="edit-status" name="status" required>
+                  <option value="0">To-Do</option>
+                  <option value="1">In Progress</option>
+                  <option value="2">Complete</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="assignee">Assignee:</label>
+            <input type="text" id="edit-assignee" name="assignee" required>
+
+            <button type="submit" id="editTicket">Update</button>
+          </form>
+        </div>
+      </div>
+      
+		</section>
+	</main>
+	<footer>
+	</footer>
+</body>
+</html>

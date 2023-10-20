@@ -1,0 +1,359 @@
+/* Global styles */
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header styles */
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: #fff;
+}
+
+/* Main styles */
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+form label, table th {
+  display: block;
+  margin-bottom: 0rem;
+}
+
+td {
+  vertical-align: top;
+  text-align: left;
+}
+
+
+
+form input, form select, form textarea {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#ticket-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#edit-ticket-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+#create-ticket-element {
+  display: flex;
+  justify-content: center;
+}
+
+#edit-ticket-element {
+  display: flex;
+  justify-content: center;
+}
+
+
+#date-and-priority {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex: 1;
+}
+
+#date-and-priority > div {
+  flex: 1;
+}
+
+#ticket-filter-inputs {
+  display:flex;
+  gap: 1rem;
+}
+
+.assigneeInp {
+  display: none;
+}
+
+
+form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f1f1f1;
+}
+
+table td:last-child {
+  text-align: center;
+}
+
+table td:last-child button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Footer styles */
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Inbox styling */
+
+#inbox {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Inbox item styling */
+
+.inbox-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border: 1px solid black;
+  margin-bottom: 1em;
+}
+
+.inbox-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.inbox-status-row {
+  margin-bottom: 0.5em;
+}
+
+.inbox-assigner-assignee-row,
+.inbox-date-priority-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.inbox-icons-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.inbox-title {
+  margin: 0;
+}
+
+.inbox-status {
+  margin: 0;
+}
+
+.inbox-assigner,
+.inbox-assignee,
+.inbox-date,
+.inbox-priority {
+  margin: 0;
+}
+
+.fas {
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+
+/* end of inbox item styling */
+
+
+/* Tickets view styling */
+
+#view-tickets {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#view-tickets form {
+  margin-bottom: 16px;
+}
+
+/* Style the filter input */
+#filter-value {
+  margin-right: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the filter button */
+.switch-view button[type="button"] {
+  background-color: green;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+/* Ticket Styling */
+
+.ticket {
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 16px;
+}
+
+.ticket-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.ticket:last-of-type {
+  margin-bottom: 100px;
+}
+
+.ticket-description {
+  margin-bottom: 1rem;
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.date,
+.priority,
+.status,
+.assignee {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.ticket-buttons {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.edit,
+.delete,
+.claim,
+.subscribe{
+  flex: 1;
+  margin-right: 1rem;
+}
+
+
+.delete {
+  background-color: darkred;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  
+}
+
+/* End of ticket styling */
+
+/* Login styling  */
+#login-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#login-section {
+  margin: 0 auto;
+}
+
+
+
+#login-div {
+  padding-top: 75px;
+  margin: 0 auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+}
+
+
